@@ -1,0 +1,943 @@
+
+<!DOCTYPE html><html lang="en"><head>
+        <meta charset="utf-8">
+        <meta property="og:title" content="Google Summer of Code">
+        <meta property="og:description" content="Google Summer of Code is a global program focused on bringing more developers into open source software development.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://summerofcode.withgoogle.com">
+        <meta property="og:image" content="https://summerofcode.withgoogle.com/static/img/og-image.png">
+        <title>Home | Google Summer of Code</title>
+        <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- FAVICONS: START  -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/assets/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#e37400">
+        <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#ff0000">
+        <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <!-- FAVICONS: END  -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <style type="text/css">@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPiIUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0308, U+0530-058F, U+2010, U+25CC, U+FB13-FB17;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjYUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjMUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPi0UvbQoi-Entw.woff2) format('woff2');unicode-range:U+0589, U+10A0-10FF, U+2D00-2D2F;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjEUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPhEUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0964-0965, U+0A01-0A75, U+200C-200D, U+20B9, U+25CC, U+262C, U+A830-A839;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjAUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjsUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0E81-0EDF, U+25CC;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPiQUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPiYUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0E01-0E5B, U+200C-200D, U+25CC;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPj0UvbQoi-Entw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjwUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjIUvbQoi-E.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPiIUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0308, U+0530-058F, U+2010, U+25CC, U+FB13-FB17;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjYUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjMUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPi0UvbQoi-Entw.woff2) format('woff2');unicode-range:U+0589, U+10A0-10FF, U+2D00-2D2F;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjEUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPhEUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0964-0965, U+0A01-0A75, U+200C-200D, U+20B9, U+25CC, U+262C, U+A830-A839;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjAUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjsUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0E81-0EDF, U+25CC;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPiQUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPiYUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0E01-0E5B, U+200C-200D, U+25CC;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPj0UvbQoi-Entw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjwUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjIUvbQoi-E.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPiIUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0308, U+0530-058F, U+2010, U+25CC, U+FB13-FB17;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjYUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjMUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPi0UvbQoi-Entw.woff2) format('woff2');unicode-range:U+0589, U+10A0-10FF, U+2D00-2D2F;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjEUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPhEUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0964-0965, U+0A01-0A75, U+200C-200D, U+20B9, U+25CC, U+262C, U+A830-A839;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjAUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjsUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0E81-0EDF, U+25CC;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPiQUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPiYUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0E01-0E5B, U+200C-200D, U+25CC;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPj0UvbQoi-Entw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjwUvbQoi-Entw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Google Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/googlesans/v41/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjIUvbQoi-E.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+    <link rel="stylesheet" href="styles.cacb78b2403775e54fd9.css"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Google+Material+Icons|Google+Material+Icons+Filled"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Google+Material+Icons|Google+Material+Icons+Filled"><style ng-transition="serverApp">.site[_ngcontent-sc147] {
+  background: transparent;
+}
+@media only screen and (min-width: 768px) {
+  .site[_ngcontent-sc147] {
+    padding-left: 125px;
+  }
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  .site[_ngcontent-sc147] {
+    padding-top: 56px;
+  }
+}
+.site__main[_ngcontent-sc147] {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.site__main--isLoading[_ngcontent-sc147]     {
+  cursor: wait;
+}
+.site__main--isLoading[_ngcontent-sc147]     a, .site__main--isLoading[_ngcontent-sc147]     button {
+  pointer-events: none;
+}</style><style ng-transition="serverApp">.toolbar-side[_ngcontent-sc122] {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 125px;
+  z-index: var(--z-toolbar-side);
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  .toolbar-side[_ngcontent-sc122] {
+    display: none;
+  }
+}
+.toolbar-side__toggle[_ngcontent-sc122] {
+  color: var(--grey600);
+  flex-shrink: 0;
+  height: 45px;
+  margin: 40px;
+  width: 45px;
+  z-index: var(--z-siteNavToggle);
+}
+.toolbar-side__toggle[_ngcontent-sc122]   .mat-icon[_ngcontent-sc122] {
+  font-size: 32px;
+  height: 32px;
+  line-height: 32px;
+  stroke: currentColor;
+  width: 32px;
+}
+.toolbar-side__logo__wrapper[_ngcontent-sc122] {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: center;
+  min-height: 40px;
+  position: relative;
+}
+.toolbar-side__logo[_ngcontent-sc122] {
+  flex-shrink: 0;
+  height: 317px;
+  margin-bottom: 125px;
+  position: relative;
+  width: 40px;
+}
+.toolbar-side__logo[_ngcontent-sc122]   img[_ngcontent-sc122] {
+  bottom: calc(0% - (40px / 2));
+  height: 40px;
+  left: 50%;
+  position: absolute;
+  transform: rotateZ(270deg);
+  transform-origin: center left;
+}
+@media print {
+  .toolbar-side[_ngcontent-sc122] {
+    display: none;
+  }
+}</style><style ng-transition="serverApp">.mat-drawer-container{position:relative;z-index:1;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-container-has-open{overflow:hidden}.mat-drawer-container.mat-drawer-container-explicit-backdrop .mat-drawer-side{z-index:3}.mat-drawer-container.ng-animate-disabled .mat-drawer-backdrop,.mat-drawer-container.ng-animate-disabled .mat-drawer-content,.ng-animate-disabled .mat-drawer-container .mat-drawer-backdrop,.ng-animate-disabled .mat-drawer-container .mat-drawer-content{transition:none}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:background-color,visibility}.cdk-high-contrast-active .mat-drawer-backdrop{opacity:.5}.mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-transition .mat-drawer-content{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%, 0, 0)}.cdk-high-contrast-active .mat-drawer,.cdk-high-contrast-active [dir=rtl] .mat-drawer.mat-drawer-end{border-right:solid 1px currentColor}.cdk-high-contrast-active [dir=rtl] .mat-drawer,.cdk-high-contrast-active .mat-drawer.mat-drawer-end{border-left:solid 1px currentColor;border-right:none}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer{transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer.mat-drawer-end{left:0;right:auto;transform:translate3d(-100%, 0, 0)}.mat-drawer-inner-container{width:100%;height:100%;overflow:auto;-webkit-overflow-scrolling:touch}.mat-sidenav-fixed{position:fixed}
+</style><style ng-transition="serverApp">.site-nav[_ngcontent-sc131] {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  max-width: calc(100vw - 20px);
+  width: 400px;
+  z-index: var(--z-site-nav);
+}
+@media only screen and (min-width: 768px) {
+  .site-nav[_ngcontent-sc131] {
+    padding: 24px;
+    padding-top: 125px;
+  }
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  .site-nav[_ngcontent-sc131] {
+    padding: 45px;
+    padding-top: 56px;
+  }
+}
+.site-nav[_ngcontent-sc131]   a[_ngcontent-sc131], .site-nav[_ngcontent-sc131]   span[_ngcontent-sc131] {
+  color: var(--grey900);
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.site-nav[_ngcontent-sc131]   a[_ngcontent-sc131]:hover {
+  color: var(--blue500);
+}
+.site-nav[_ngcontent-sc131]   a[_ngcontent-sc131]:active {
+  color: var(--blue700);
+}
+.site-nav[_ngcontent-sc131]   a.active[_ngcontent-sc131] {
+  color: var(--blue500);
+  pointer-events: none;
+  position: relative;
+}
+.site-nav[_ngcontent-sc131]   a.active[_ngcontent-sc131]:before {
+  border-left: 2px solid var(--blue300);
+  content: "";
+  height: 1.3em;
+  left: -5px;
+  position: absolute;
+}
+.site-nav__close[_ngcontent-sc131] {
+  align-items: center;
+  background: var(--blue500);
+  color: #fff;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 56px;
+}
+@media only screen and (min-width: 768px) {
+  .site-nav__close[_ngcontent-sc131] {
+    display: none;
+  }
+}
+.site-nav__close[_ngcontent-sc131]   button[_ngcontent-sc131] {
+  height: 56px;
+  width: 56px;
+}
+.site-nav__close[_ngcontent-sc131]   svg[_ngcontent-sc131] {
+  height: 20px;
+  stroke: #fff;
+  width: 20px;
+}
+.site-nav__main[_ngcontent-sc131]   a[_ngcontent-sc131] {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+@media only screen and (min-width: 768px) {
+  .site-nav__main[_ngcontent-sc131]   a[_ngcontent-sc131] {
+    font-size: 24px;
+    line-height: 32px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  .site-nav__main[_ngcontent-sc131]   a[_ngcontent-sc131] {
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .site-nav__footer[_ngcontent-sc131] {
+    margin-bottom: 86px;
+  }
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  .site-nav__footer[_ngcontent-sc131] {
+    margin-bottom: 42px;
+  }
+}
+.site-nav__footer[_ngcontent-sc131]   a[_ngcontent-sc131], .site-nav__footer[_ngcontent-sc131]   span[_ngcontent-sc131] {
+  padding-bottom: 8px;
+  padding-top: 8px;
+}</style><style ng-transition="serverApp">.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:.04}@media(hover: none){.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-icon-button,.mat-stroked-button,.mat-flat-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-button.mat-button-disabled,.mat-icon-button.mat-button-disabled,.mat-stroked-button.mat-button-disabled,.mat-flat-button.mat-button-disabled{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button.mat-button-disabled{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-ripple.mat-ripple,.mat-stroked-button .mat-button-focus-overlay{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab.mat-button-disabled{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab.mat-button-disabled{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button i,.mat-icon-button .mat-icon{line-height:24px}.mat-button-ripple.mat-ripple,.mat-button-focus-overlay{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-ripple.mat-ripple:not(:empty){transform:translateZ(0)}.mat-button-focus-overlay{opacity:0;transition:opacity 200ms cubic-bezier(0.35, 0, 0.25, 1),background-color 200ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper>*,.mat-flat-button .mat-button-wrapper>*,.mat-stroked-button .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*,.mat-fab .mat-button-wrapper>*,.mat-mini-fab .mat-button-wrapper>*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:inline-flex;justify-content:center;align-items:center;font-size:inherit;width:2.5em;height:2.5em}.cdk-high-contrast-active .mat-button,.cdk-high-contrast-active .mat-flat-button,.cdk-high-contrast-active .mat-raised-button,.cdk-high-contrast-active .mat-icon-button,.cdk-high-contrast-active .mat-fab,.cdk-high-contrast-active .mat-mini-fab{outline:solid 1px}.cdk-high-contrast-active .mat-button-base.cdk-keyboard-focused,.cdk-high-contrast-active .mat-button-base.cdk-program-focused{outline:solid 3px}
+</style><style ng-transition="serverApp">.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1, 1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}
+</style><style ng-transition="serverApp">.home__banner__logo[_ngcontent-sc227] {
+  max-width: 295px;
+}
+.home__banner__dots[_ngcontent-sc227] {
+  z-index: -1;
+}
+.home__banner__dots[_ngcontent-sc227] {
+  border: 8px solid transparent;
+  box-sizing: border-box;
+  filter: blur(8px);
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.home__banner__dots[_ngcontent-sc227]:before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 2160" width="1920" height="2160"><defs><pattern id="p" width="240" height="240" patternUnits="userSpaceOnUse"><circle cx="80" cy="80" r="80" fill="%23d2e3fc" /></pattern></defs><rect fill="url(%23p)" width="1920" height="2160" /></svg>');
+  background-repeat: no-repeat;
+  height: 2160px;
+  width: 1920px;
+  content: "";
+  inset: calc((100% - 2160px) / 2) calc((100% - 1920px) / 2);
+  position: absolute;
+  inset: auto auto 0 20%;
+  transform: perspective(900px) rotateX(50deg);
+  transform-origin: bottom center;
+}
+.home__features[_ngcontent-sc227] {
+  position: relative;
+}
+.home__features[_ngcontent-sc227]   app-home-feature[_ngcontent-sc227] {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.home__features[_ngcontent-sc227]   app-home-feature[_ngcontent-sc227]:first-of-type {
+  background: linear-gradient(180deg, #f8f9fa 41.31%, rgba(248, 249, 250, 0.7) 100%);
+}
+.home__features[_ngcontent-sc227]   app-home-feature[_ngcontent-sc227]:last-of-type {
+  background: linear-gradient(180deg, rgba(248, 249, 250, 0.7) 41.31%, #f8f9fa 100%);
+}
+.home__news[_ngcontent-sc227] {
+  display: block;
+  position: relative;
+}
+.home__news__bg[_ngcontent-sc227] {
+  height: 100%;
+  inset: 0 0 auto auto;
+  opacity: 0.92;
+  position: absolute;
+  width: 100%;
+}
+.home__news__dots[_ngcontent-sc227] {
+  border: 8px solid transparent;
+  box-sizing: border-box;
+  filter: blur(8px);
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.home__news__dots[_ngcontent-sc227]:before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1060" width="1200" height="1060"><defs><pattern id="p" width="140" height="140" patternUnits="userSpaceOnUse"><circle cx="40" cy="40" r="40" fill="%234285f4" /></pattern></defs><rect fill="url(%23p)" width="1200" height="1060" /></svg>');
+  background-repeat: no-repeat;
+  height: 1060px;
+  width: 1200px;
+  content: "";
+  inset: calc((100% - 1060px) / 2) calc((100% - 1200px) / 2);
+  position: absolute;
+  left: 0;
+  right: 60%;
+  transform: perspective(1000px) rotateY(45deg);
+  transform-origin: center left;
+}
+.home-feature__section--heading[_ngcontent-sc227] {
+  font-weight: 400;
+}</style><style ng-transition="serverApp">mat-toolbar[_ngcontent-sc193] {
+  background-color: #fff;
+  padding: 0;
+}</style><style ng-transition="serverApp">.feature-banner__dots[_ngcontent-sc150] {
+  height: 100%;
+  inset: 0 0 auto auto;
+  position: absolute;
+  width: 100%;
+}
+.feature-banner__dots[_ngcontent-sc150]:before, .feature-banner__dots[_ngcontent-sc150]:after {
+  content: "";
+  position: absolute;
+}
+.feature-banner__dots[_ngcontent-sc150]:before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 872 264" width="872" height="264"><defs><pattern id="p" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="4" fill="rgba(180, 180, 180, 0.15)" /></pattern></defs><rect fill="url(%23p)" width="872" height="264" /></svg>');
+  background-repeat: no-repeat;
+  height: 264px;
+  width: 872px;
+  background-position: top 10px right 10px;
+  background-size: cover;
+  inset: 0 auto auto 45%;
+  overflow: hidden;
+  width: 55%;
+}
+.feature-banner__dots[_ngcontent-sc150]:after {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 136" width="136" height="136"><defs><pattern id="p" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="4" fill="rgba(50, 50, 50, 0.06)" /></pattern></defs><rect fill="url(%23p)" width="136" height="136" /></svg>');
+  background-repeat: no-repeat;
+  height: 136px;
+  width: 136px;
+  inset: auto auto -55px 55px;
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  .feature-banner__dots[_ngcontent-sc150]:after {
+    display: none;
+  }
+}</style><style ng-transition="serverApp">.feature-cta[_ngcontent-sc151] {
+  align-items: center;
+  display: flex;
+}
+
+.feature-cta--align-center[_ngcontent-sc151] {
+  justify-content: center;
+}
+
+.feature-cta__content[_ngcontent-sc151] {
+  width: 56.25rem;
+}
+
+@media only screen and (max-width: calc(1024px - 1px)) {
+  .feature-cta__image[_ngcontent-sc151] {
+    display: none;
+  }
+}</style><style ng-transition="serverApp">.double-feature__item[_ngcontent-sc194] {
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  padding: 1.875rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .double-feature__item__left[_ngcontent-sc194], .double-feature__item__right[_ngcontent-sc194] {
+    padding: 3.75rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .double-feature__item__left[_ngcontent-sc194], .double-feature__item__right[_ngcontent-sc194] {
+    padding-bottom: 4.6875rem;
+    padding-top: 4.6875rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .double-feature__item__left[_ngcontent-sc194] {
+    padding-left: 7.5rem;
+    padding-right: 4.6875rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .double-feature__item__right[_ngcontent-sc194] {
+    padding-left: 4.6875rem;
+    padding-right: 7.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .double-feature--tall[_ngcontent-sc194]   .double-feature__item[_ngcontent-sc194] {
+    padding-bottom: 8.125rem;
+    padding-top: 8.125rem;
+  }
+}</style><style ng-transition="serverApp">.metrics[_ngcontent-sc195] {
+  display: flex;
+  height: 100%;
+}
+
+.metrics__inner[_ngcontent-sc195] {
+  align-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 3rem;
+  row-gap: 3rem;
+}
+
+@media only screen and (min-width: 384px) {
+  .metrics__inner[_ngcontent-sc195] {
+    flex-flow: row wrap;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .metrics__inner[_ngcontent-sc195] {
+    grid-column-gap: 0;
+    column-gap: 0;
+  }
+}
+
+@media only screen and (min-width: 384px) {
+  .metric[_ngcontent-sc195] {
+    flex-basis: 50%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .metric[_ngcontent-sc195] {
+    flex-basis: 33.3%;
+  }
+}
+
+.metric__callout[_ngcontent-sc195] {
+  font-family: JetBrains Mono, monospace;
+  font-size: calc( 32px + (40 - 32) * (100vw - 384px) / (1440 - 384) );
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: calc( 40px + (60 - 40) * (100vw - 384px) / (1440 - 384) );
+  --styleguide: hdg-3;
+}</style><style ng-transition="serverApp">.home-feature__hd[_ngcontent-sc196] {
+  font-family: JetBrains Mono, monospace;
+  font-size: calc( 32px + (60 - 32) * (100vw - 384px) / (1440 - 384) );
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: calc( 40px + (79 - 40) * (100vw - 384px) / (1440 - 384) );
+  --styleguide: hdg-2;
+  margin-bottom: 1rem;
+}
+
+.home-feature__bd[_ngcontent-sc196] {
+  letter-spacing: 0.005em;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-feature__bd[_ngcontent-sc196] {
+    margin-bottom: 3rem;
+  }
+}
+
+.home-feature__bd[_ngcontent-sc196]     p + p {
+  margin-top: 1.5rem;
+}
+
+.home-feature__ft[_ngcontent-sc196] {
+  margin-bottom: 4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-feature__ft[_ngcontent-sc196] {
+    margin-bottom: 6rem;
+  }
+}
+
+.home-feature__feature-content[_ngcontent-sc196] {
+  margin-bottom: 2.5rem;
+}
+
+.home-feature__feature-content[_ngcontent-sc196]     .mat-icon {
+  transform: scale(1.3);
+}
+
+@media only screen and (min-width: 768px) {
+  .home-feature__bd-length--short[_ngcontent-sc196] {
+    max-width: 65%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home-feature__bd-length--long[_ngcontent-sc196] {
+    max-width: 87%;
+  }
+}</style><style ng-transition="serverApp">.feature-cards[_ngcontent-sc200] {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .feature-cards[_ngcontent-sc200] {
+    flex-direction: row;
+    min-height: 14.375rem;
+  }
+}
+.feature-cards__item[_ngcontent-sc200] {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 15px 15px 54px -10px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  padding: 1.75rem;
+  width: 100%;
+}
+.feature-cards__item[_ngcontent-sc200]    > *[_ngcontent-sc200]    + *[_ngcontent-sc200] {
+  margin-top: 1rem;
+}
+.feature-cards__item__cta[_ngcontent-sc200] {
+  display: block;
+}
+.feature-cards--large[_ngcontent-sc200] {
+  grid-gap: 2.5rem;
+  gap: 2.5rem;
+}
+.feature-cards--large[_ngcontent-sc200]   .feature-cards__item[_ngcontent-sc200] {
+  padding: 2.5rem;
+}
+.feature-cards--large[_ngcontent-sc200]     .feature-cta {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+.feature-cards--large[_ngcontent-sc200]     .icon-container {
+  margin: 2.25rem 0;
+}
+.feature-cards--large[_ngcontent-sc200]     .mat-icon {
+  transform: scale(2.5);
+}
+[_nghost-sc200]     .mat-icon {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}</style><style ng-transition="serverApp">.grid[_ngcontent-sc226] {
+  color: #ffffff;
+  position: relative;
+}
+.grid__row[_ngcontent-sc226] {
+  position: inherit;
+  z-index: 10;
+}
+.grid__row__item[_ngcontent-sc226] {
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  .grid__row__item[_ngcontent-sc226] {
+    grid-column: 3/span 8;
+  }
+}</style><style ng-transition="serverApp">.cdk-high-contrast-active .mat-toolbar{outline:solid 1px}.mat-toolbar-row,.mat-toolbar-single-row{display:flex;box-sizing:border-box;padding:0 16px;width:100%;flex-direction:row;align-items:center;white-space:nowrap}.mat-toolbar-multiple-rows{display:flex;box-sizing:border-box;flex-direction:column;width:100%}
+</style><style ng-transition="serverApp">.v-list-wrapper[_ngcontent-sc225] {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0.9375rem 0.9375rem 3.375rem -0.625rem rgba(0, 0, 0, 0.12);
+  height: 645px;
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+  text-align: left;
+}
+@media only screen and (min-width: 1024px) {
+  .v-list-wrapper[_ngcontent-sc225] {
+    padding: 3.125rem 1.875rem 1.25rem 1.875rem;
+  }
+}
+.v-list-wrapper[_ngcontent-sc225]     .v-list {
+  flex-grow: 1;
+  height: 100%;
+  overflow: auto;
+}
+.v-list-wrapper[_ngcontent-sc225]     .v-list__item {
+  height: auto;
+}
+.v-list-wrapper[_ngcontent-sc225]     .v-list__item__link {
+  color: #1967d2;
+  text-decoration: none;
+}
+.v-list-wrapper[_ngcontent-sc225]     .v-list__item__title {
+  margin-bottom: 1.5rem;
+}
+.v-list-wrapper[_ngcontent-sc225]     .v-list__item__title h5 {
+  font-family: "Google Sans", "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 1.5625rem;
+  line-height: 1.5625;
+}
+.v-list-wrapper[_ngcontent-sc225]     .v-list__item mat-card.mat-card {
+  box-shadow: none;
+  padding: 0px;
+}
+.v-list-wrapper[_ngcontent-sc225]     .v-list__item mat-card.mat-card mat-card-actions {
+  margin: 0px;
+  padding: 0px;
+}
+.v-list-wrapper[_ngcontent-sc225]     .v-list__item mat-card.mat-card mat-card-actions hr {
+  border: 1px solid #bdc1c6;
+  margin-block-start: 1.5rem;
+}
+.spinner[_ngcontent-sc225], .no-results[_ngcontent-sc225] {
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0.9375rem 0.9375rem 3.375rem -0.625rem rgba(0, 0, 0, 0.12);
+  display: flex;
+  height: 200px;
+  justify-content: center;
+}</style><style ng-transition="serverApp">.toolbar-top[_ngcontent-sc134] {
+  align-items: center;
+  background-color: #fff;
+  height: 56px;
+  justify-content: space-between;
+  left: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  z-index: var(--z-toolbar-top);
+}
+@media only screen and (min-width: 768px) {
+  .toolbar-top[_ngcontent-sc134] {
+    display: none;
+  }
+}
+.toolbar-top__logo[_ngcontent-sc134]   img[_ngcontent-sc134] {
+  display: block;
+  height: 26px;
+}
+.toolbar-top__left[_ngcontent-sc134], .toolbar-top__right[_ngcontent-sc134] {
+  display: flex;
+  width: 72px;
+}
+.toolbar-top__left[_ngcontent-sc134] {
+  justify-content: left;
+}
+.toolbar-top__toggle[_ngcontent-sc134] {
+  height: 56px;
+  width: 56px;
+}
+.toolbar-top__toggle[_ngcontent-sc134]   .mat-icon[_ngcontent-sc134] {
+  height: 20px;
+  stroke: var(--grey800);
+  width: 20px;
+}
+@media print {
+  .toolbar-top[_ngcontent-sc134] {
+    visibility: hidden;
+  }
+}</style><style ng-transition="serverApp">.user-menu.mat-menu-panel {
+  border-radius: 16px;
+  margin-top: 10px;
+  max-width: none;
+  padding: 10px 0;
+  width: 300px;
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  .user-menu.mat-menu-panel {
+    margin-right: 10px;
+  }
+}
+.user-menu section:not(:last-child) {
+  padding-bottom: 16px;
+}
+.user-menu section + section:before {
+  border-top: 1px solid var(--grey400);
+  content: "";
+  display: block;
+  margin-left: 32px;
+  margin-right: 32px;
+  padding-top: 16px;
+  width: calc(100% - 64px);
+}
+.mat-menu-item.context-title .context-title__active-indicator {
+  color: var(--green600);
+  font-size: 20px;
+  margin-left: auto;
+  padding-left: 8px;
+}
+.mat-menu-item.context-title--has-org {
+  align-items: flex-start;
+  display: flex;
+  height: auto;
+}
+.mat-menu-item.context-title--has-org .mat-icon {
+  flex-shrink: 0;
+}
+.mat-menu-item.context-title--has-org .context-title__body {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  white-space: normal;
+}
+.mat-menu-item.context-title--has-org .context-title__body span {
+  line-height: 1.3em;
+}
+.mat-menu-item.context-title--has-org .context-title__slug {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+@media print {
+  .user-menu-toggle {
+    visibility: hidden;
+  }
+}</style><style ng-transition="serverApp">.footer[_ngcontent-sc144] {
+  min-height: 363px;
+  position: relative;
+  z-index: var(--z-layout-footer);
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  .footer[_ngcontent-sc144] {
+    min-height: 563px;
+  }
+}
+.footer__content[_ngcontent-sc144] {
+  box-sizing: border-box;
+  padding: 2.25rem 3.75rem 2.3125rem 3.75rem;
+}
+.footer__content[_ngcontent-sc144]   .grid[_ngcontent-sc144] {
+  height: 100%;
+}
+.footer-logo[_ngcontent-sc144] {
+  height: 100%;
+  margin-bottom: 20px;
+  max-width: 100%;
+  position: relative;
+  width: 15.625rem;
+}
+@media only screen and (min-width: 1024px) {
+  .footer-logo[_ngcontent-sc144] {
+    width: 21.25rem;
+  }
+}
+.footer-logo[_ngcontent-sc144]   p[_ngcontent-sc144] {
+  color: #5f6368;
+  letter-spacing: 0.005em;
+}
+.right-nav-wrapper[_ngcontent-sc144] {
+  display: flex;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 1024px) {
+  .right-nav-wrapper[_ngcontent-sc144] {
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .right-nav-wrapper[_ngcontent-sc144] {
+    justify-content: space-evenly;
+  }
+}
+.right-nav-wrapper[_ngcontent-sc144]   ul[_ngcontent-sc144]    + ul[_ngcontent-sc144] {
+  margin-left: 3.75rem;
+}
+@media only screen and (min-width: 1024px) {
+  .right-nav-wrapper[_ngcontent-sc144]   ul[_ngcontent-sc144]    + ul[_ngcontent-sc144] {
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .right-nav-wrapper[_ngcontent-sc144]   ul[_ngcontent-sc144] {
+    margin-right: 12px;
+  }
+}
+.right-nav-wrapper[_ngcontent-sc144]   li[_ngcontent-sc144] {
+  letter-spacing: 0.01em;
+  padding-bottom: 24px;
+}
+.right-nav-wrapper[_ngcontent-sc144]   a[_ngcontent-sc144] {
+  color: #202124;
+  text-decoration: none;
+}
+.bottom-nav-wrapper[_ngcontent-sc144]   .google-word[_ngcontent-sc144] {
+  background-image: url("/assets/media/gray-google-word-logo.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 22px;
+  width: 60px;
+}
+.bottom-nav-wrapper[_ngcontent-sc144]   ul[_ngcontent-sc144] {
+  display: inline-block;
+}
+@media only screen and (min-width: 768px) {
+  .bottom-nav-wrapper[_ngcontent-sc144]   ul[_ngcontent-sc144] {
+    display: flex;
+  }
+}
+.bottom-nav-wrapper[_ngcontent-sc144]   li[_ngcontent-sc144] {
+  height: 22px;
+  margin-bottom: 1.25rem;
+  margin-right: 1.875rem;
+}
+@media only screen and (min-width: 1024px) {
+  .bottom-nav-wrapper[_ngcontent-sc144]   li[_ngcontent-sc144] {
+    display: inline;
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (max-width: calc(1024px - 1px)) {
+  .bottom-nav-wrapper[_ngcontent-sc144]   li[_ngcontent-sc144] {
+    float: left;
+    margin-right: 0.625rem;
+  }
+}
+.bottom-nav-wrapper[_ngcontent-sc144]   a[_ngcontent-sc144] {
+  color: #5f6368;
+  text-decoration: none;
+}
+hr[_ngcontent-sc144] {
+  border: 1px solid #bdc1c6;
+  margin-block-end: 0;
+}
+@media print {
+  .footer[_ngcontent-sc144] {
+    visibility: hidden;
+  }
+}</style><style ng-transition="serverApp">.user-menu-toggle[_ngcontent-sc141] {
+  align-items: center;
+  border: 0;
+  box-sizing: border-box;
+  color: var(--grey900);
+  cursor: pointer;
+  display: flex;
+  font-size: inherit;
+  padding: 0;
+  position: fixed;
+  transition: color 0.5s;
+  z-index: var(--z-user-menu-toggle);
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  .user-menu-toggle[_ngcontent-sc141] {
+    background-color: transparent;
+    border-radius: 28px;
+    font-size: 0;
+    height: 56px;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    width: 56px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .user-menu-toggle[_ngcontent-sc141] {
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.16), 0px 3px 4px 0px rgba(0, 0, 0, 0.112), 0px 1px 8px 0px rgba(0, 0, 0, 0.096);
+    background-color: #fff;
+    border-radius: 22.5px;
+    height: 45px;
+    justify-content: right;
+    padding: 6.5px;
+    padding-left: 22.5px;
+    right: 40px;
+    top: 40px;
+    width: auto;
+  }
+}
+.user-menu-toggle[disabled][_ngcontent-sc141] {
+  color: var(--grey600);
+  cursor: wait;
+}
+.user-menu-toggle[disabled][_ngcontent-sc141]   .mat-icon[_ngcontent-sc141] {
+  opacity: 0.6;
+}
+.user-menu-toggle[_ngcontent-sc141]:focus-visible {
+  box-shadow: 0 0 0 3px var(--orange900);
+  outline: 0;
+}
+p[_ngcontent-sc141] {
+  max-width: 200px;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+hr[_ngcontent-sc141] {
+  border: 0;
+  border-right: 1px solid var(--grey200);
+  display: inline-block;
+  height: 1em;
+  margin: 0 10px;
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  hr[_ngcontent-sc141] {
+    display: none;
+  }
+}
+.avatar[_ngcontent-sc141] {
+  border-radius: 50%;
+  font-size: 32px;
+  height: 32px;
+  line-height: 32px;
+  transition: opacity 0.5s;
+  width: 32px;
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  .avatar[_ngcontent-sc141] {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .avatar[_ngcontent-sc141] {
+    margin-left: 10px;
+  }
+}
+.avatar--fallback[_ngcontent-sc141] {
+  background-color: var(--grey200);
+  color: var(--grey700);
+}
+.avatar--unauthed[_ngcontent-sc141] {
+  background-color: transparent;
+  color: var(--grey700);
+}
+.avatar--assumed[_ngcontent-sc141] {
+  color: var(--blue600);
+}
+.imgFallback--hasError[_ngcontent-sc141] {
+  display: none;
+}
+.expand-cta[_ngcontent-sc141] {
+  color: var(--grey600);
+  margin-left: 10px;
+  margin-right: 5px;
+}
+@media only screen and (max-width: calc(768px - 1px)) {
+  .expand-cta[_ngcontent-sc141] {
+    display: none;
+  }
+}</style><style ng-transition="serverApp">mat-menu{display:none}.mat-menu-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 48px);border-radius:4px;outline:0;min-height:64px}.mat-menu-panel.ng-animating{pointer-events:none}.cdk-high-contrast-active .mat-menu-panel{outline:solid 1px}.mat-menu-content:not(:empty){padding-top:8px;padding-bottom:8px}.mat-menu-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative}.mat-menu-item::-moz-focus-inner{border:0}.mat-menu-item[disabled]{cursor:default}[dir=rtl] .mat-menu-item{text-align:right}.mat-menu-item .mat-icon{margin-right:16px;vertical-align:middle}.mat-menu-item .mat-icon svg{vertical-align:top}[dir=rtl] .mat-menu-item .mat-icon{margin-left:16px;margin-right:0}.mat-menu-item[disabled]{pointer-events:none}.cdk-high-contrast-active .mat-menu-item{margin-top:1px}.cdk-high-contrast-active .mat-menu-item.cdk-program-focused,.cdk-high-contrast-active .mat-menu-item.cdk-keyboard-focused,.cdk-high-contrast-active .mat-menu-item-highlighted{outline:dotted 1px}.mat-menu-item-submenu-trigger{padding-right:32px}[dir=rtl] .mat-menu-item-submenu-trigger{padding-right:16px;padding-left:32px}.mat-menu-submenu-icon{position:absolute;top:50%;right:16px;transform:translateY(-50%);width:5px;height:10px;fill:currentColor}[dir=rtl] .mat-menu-submenu-icon{right:auto;left:16px;transform:translateY(-50%) scaleX(-1)}.cdk-high-contrast-active .mat-menu-submenu-icon{fill:CanvasText}button.mat-menu-item{width:100%}.mat-menu-item .mat-menu-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}
+</style><style ng-transition="serverApp">.mat-progress-bar{display:block;height:4px;overflow:hidden;position:relative;transition:opacity 250ms linear;width:100%}._mat-animation-noopable.mat-progress-bar{transition:none;animation:none}.mat-progress-bar .mat-progress-bar-element,.mat-progress-bar .mat-progress-bar-fill::after{height:100%;position:absolute;width:100%}.mat-progress-bar .mat-progress-bar-background{width:calc(100% + 10px)}.cdk-high-contrast-active .mat-progress-bar .mat-progress-bar-background{display:none}.mat-progress-bar .mat-progress-bar-buffer{transform-origin:top left;transition:transform 250ms ease}.cdk-high-contrast-active .mat-progress-bar .mat-progress-bar-buffer{border-top:solid 5px;opacity:.5}.mat-progress-bar .mat-progress-bar-secondary{display:none}.mat-progress-bar .mat-progress-bar-fill{animation:none;transform-origin:top left;transition:transform 250ms ease}.cdk-high-contrast-active .mat-progress-bar .mat-progress-bar-fill{border-top:solid 4px}.mat-progress-bar .mat-progress-bar-fill::after{animation:none;content:"";display:inline-block;left:0}.mat-progress-bar[dir=rtl],[dir=rtl] .mat-progress-bar{transform:rotateY(180deg)}.mat-progress-bar[mode=query]{transform:rotateZ(180deg)}.mat-progress-bar[mode=query][dir=rtl],[dir=rtl] .mat-progress-bar[mode=query]{transform:rotateZ(180deg) rotateY(180deg)}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-fill,.mat-progress-bar[mode=query] .mat-progress-bar-fill{transition:none}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-primary,.mat-progress-bar[mode=query] .mat-progress-bar-primary{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-primary-indeterminate-translate 2000ms infinite linear;left:-145.166611%}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-primary.mat-progress-bar-fill::after,.mat-progress-bar[mode=query] .mat-progress-bar-primary.mat-progress-bar-fill::after{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-primary-indeterminate-scale 2000ms infinite linear}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-secondary,.mat-progress-bar[mode=query] .mat-progress-bar-secondary{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-secondary-indeterminate-translate 2000ms infinite linear;left:-54.888891%;display:block}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-secondary.mat-progress-bar-fill::after,.mat-progress-bar[mode=query] .mat-progress-bar-secondary.mat-progress-bar-fill::after{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-secondary-indeterminate-scale 2000ms infinite linear}.mat-progress-bar[mode=buffer] .mat-progress-bar-background{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-background-scroll 250ms infinite linear;display:block}.mat-progress-bar._mat-animation-noopable .mat-progress-bar-fill,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-fill::after,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-buffer,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-primary,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-primary.mat-progress-bar-fill::after,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-secondary,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-secondary.mat-progress-bar-fill::after,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-background{animation:none;transition-duration:1ms}@keyframes mat-progress-bar-primary-indeterminate-translate{0%{transform:translateX(0)}20%{animation-timing-function:cubic-bezier(0.5, 0, 0.701732, 0.495819);transform:translateX(0)}59.15%{animation-timing-function:cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);transform:translateX(83.67142%)}100%{transform:translateX(200.611057%)}}@keyframes mat-progress-bar-primary-indeterminate-scale{0%{transform:scaleX(0.08)}36.65%{animation-timing-function:cubic-bezier(0.334731, 0.12482, 0.785844, 1);transform:scaleX(0.08)}69.15%{animation-timing-function:cubic-bezier(0.06, 0.11, 0.6, 1);transform:scaleX(0.661479)}100%{transform:scaleX(0.08)}}@keyframes mat-progress-bar-secondary-indeterminate-translate{0%{animation-timing-function:cubic-bezier(0.15, 0, 0.515058, 0.409685);transform:translateX(0)}25%{animation-timing-function:cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);transform:translateX(37.651913%)}48.35%{animation-timing-function:cubic-bezier(0.4, 0.627035, 0.6, 0.902026);transform:translateX(84.386165%)}100%{transform:translateX(160.277782%)}}@keyframes mat-progress-bar-secondary-indeterminate-scale{0%{animation-timing-function:cubic-bezier(0.15, 0, 0.515058, 0.409685);transform:scaleX(0.08)}19.15%{animation-timing-function:cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);transform:scaleX(0.457104)}44.15%{animation-timing-function:cubic-bezier(0.4, 0.627035, 0.6, 0.902026);transform:scaleX(0.72796)}100%{transform:scaleX(0.08)}}@keyframes mat-progress-bar-background-scroll{to{transform:translateX(-8px)}}
+</style></head>
+
+    <body class="gsoc-mat-theme">
+        <app-root ng-version="12.2.0"><app-layout _nghost-sc147=""><app-toolbar-side _ngcontent-sc147="" _nghost-sc122=""><div _ngcontent-sc122="" class="toolbar-side"><button _ngcontent-sc122="" mat-icon-button="" class="mat-focus-indicator toolbar-side__toggle mat-icon-button mat-button-base _mat-animation-noopable" aria-label="Open Menu"><span class="mat-button-wrapper"><mat-icon _ngcontent-sc122="" role="img" svgicon="custom:menu" class="mat-icon notranslate mat-icon-no-color ng-star-inserted" aria-hidden="true" data-mat-icon-type="svg" data-mat-icon-name="menu" data-mat-icon-namespace="custom"><svg fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"></svg></mat-icon><!----><!----></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button><div _ngcontent-sc122="" class="toolbar-side__logo__wrapper"><div _ngcontent-sc122="" aria-hidden="true" class="toolbar-side__logo"><img _ngcontent-sc122="" src="/assets/media/logo.svg" alt="Google Summer of Code logo"></div></div></div></app-toolbar-side><mat-sidenav-container _ngcontent-sc147="" class="mat-drawer-container mat-sidenav-container site"><div class="mat-drawer-backdrop ng-star-inserted"></div><!----><div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div><mat-sidenav _ngcontent-sc147="" tabindex="-1" mode="over" position="start" class="mat-drawer mat-sidenav ng-tns-c127-0 ng-trigger ng-trigger-transform mat-drawer-over mat-sidenav-fixed ng-star-inserted" style="top:0px;bottom:0px;box-shadow:none;visibility:hidden;"><div cdkscrollable="" class="mat-drawer-inner-container ng-tns-c127-0"><app-site-nav _ngcontent-sc147="" _nghost-sc131="" class="ng-tns-c127-0"><nav _ngcontent-sc131="" class="site-nav"><div _ngcontent-sc131="" class="site-nav__close"><button _ngcontent-sc131="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base _mat-animation-noopable"><span class="mat-button-wrapper"><mat-icon _ngcontent-sc131="" role="img" class="mat-icon notranslate google-material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">close</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button></div><ul _ngcontent-sc131="" class="site-nav__main"><li _ngcontent-sc131=""><a _ngcontent-sc131="" app-route="HOME" href="/" class="active"> Home </a></li><li _ngcontent-sc131=""><a _ngcontent-sc131="" app-route="PUBLIC_ABOUT" href="/about" class="">About</a></li><li _ngcontent-sc131=""><a _ngcontent-sc131="" app-route="PUBLIC_HOW_IT_WORKS" href="/how-it-works" class="">How it works</a></li><li _ngcontent-sc131=""><a _ngcontent-sc131="" app-route="PUBLIC_GET_STARTED" href="/get-started" class="">Get started</a></li><!----><!----><li _ngcontent-sc131=""><a _ngcontent-sc131="" app-route="ARCHIVED_PROGRAMS" href="/archive" class="">Past programs</a></li></ul><ul _ngcontent-sc131="" class="site-nav__footer"><li _ngcontent-sc131=""><a _ngcontent-sc131="" app-route="PUBLIC_HELP" href="/help" class="">Help</a></li><li _ngcontent-sc131=""><a _ngcontent-sc131="" app-route="PUBLIC_RULES" href="/rules" class="">Rules</a></li><li _ngcontent-sc131=""><a _ngcontent-sc131="" app-route="PUBLIC_TERMS" href="/terms" class="">Terms</a></li><!----></ul></nav></app-site-nav></div></mat-sidenav><div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div><mat-sidenav-content _ngcontent-sc147="" class="mat-drawer-content mat-sidenav-content site__main theme theme--gray ng-star-inserted" style="margin-left:;margin-right:;"><app-toolbar-top _ngcontent-sc147="" _nghost-sc134=""><mat-toolbar _ngcontent-sc134="" class="mat-toolbar mat-elevation-z3 toolbar-top mat-toolbar-single-row"><div _ngcontent-sc134="" class="toolbar-top__left"><button _ngcontent-sc134="" mat-icon-button="" class="mat-focus-indicator toolbar-top__toggle mat-icon-button mat-button-base _mat-animation-noopable" aria-label="Open Menu"><span class="mat-button-wrapper"><mat-icon _ngcontent-sc134="" role="img" svgicon="custom:menu" class="mat-icon notranslate mat-icon-no-color" aria-hidden="true" data-mat-icon-type="svg" data-mat-icon-name="menu" data-mat-icon-namespace="custom"><svg fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"></svg></mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button></div><a _ngcontent-sc134="" app-route="HOME" class="toolbar-top__logo active" href="/"><img _ngcontent-sc134="" src="/assets/media/logo.svg" alt="Google Summer of Code logo"></a><div _ngcontent-sc134="" class="toolbar-top__right"></div></mat-toolbar></app-toolbar-top><!----><app-user-menu _ngcontent-sc147=""><app-user-menu-toggle _nghost-sc141=""><button _ngcontent-sc141="" matripple="" class="mat-ripple user-menu-toggle ng-star-inserted" disabled=""><p _ngcontent-sc141="">Log in</p><mat-icon _ngcontent-sc141="" role="img" aria-hidden="true" class="mat-icon notranslate avatar avatar--unauthed google-material-icons mat-icon-no-color" data-mat-icon-type="font">person_filled</mat-icon></button><!----><!----></app-user-menu-toggle><mat-menu xposition="before" yposition="below" class="ng-star-inserted"><!----></mat-menu></app-user-menu><div _ngcontent-sc147="" class="layout layout--public ng-star-inserted"><div _ngcontent-sc147="" class="layout__inner"><main _ngcontent-sc147="" class="layout__inner__content"><router-outlet class="ng-star-inserted"></router-outlet><ng-component _nghost-sc227="" class="ng-star-inserted"><app-banner-new-site _ngcontent-sc227="" _nghost-sc193=""><mat-toolbar _ngcontent-sc193="" class="mat-toolbar section section--short mat-toolbar-single-row"><div _ngcontent-sc193="" class="section__inner"><p _ngcontent-sc193="" class="text--body-2"> Welcome to our new site! <a _ngcontent-sc193="" href="http://developers.google.com/open-source/gsoc/help/newsite" target="_blank">Learn more</a></p></div></mat-toolbar></app-banner-new-site><hr _ngcontent-sc227="" class="hr"><app-feature-banner _ngcontent-sc227="" sectionclass="section--tall" _nghost-sc150=""><section _ngcontent-sc150="" class="section section--tall theme--gray"><!----><div _ngcontent-sc150="" class="section__inner"><div _ngcontent-sc227="" class="home__banner__dots"></div><img _ngcontent-sc227="" src="assets/media/logo.svg" alt="Google Summer of Code logo" class="home__banner__logo"><app-feature-cta _ngcontent-sc227="" _nghost-sc151=""><div _ngcontent-sc151="" class="feature-cta"><div _ngcontent-sc151="" class=""><div _ngcontent-sc151="" class=""><h1 _ngcontent-sc227="" heading="">2022 Program Announced</h1></div><div _ngcontent-sc151="" class="vr"></div><div _ngcontent-sc151="" class="constrainer--line-length"></div><div _ngcontent-sc151="" class="vr vr--3x"></div><!----></div><div _ngcontent-sc151="" class="feature-cta__image"></div></div></app-feature-cta></div></section></app-feature-banner><div _ngcontent-sc227="" class="home__features"><app-double-feature _ngcontent-sc227="" _nghost-sc194=""><section _ngcontent-sc194="" class="layer layer--1"><div _ngcontent-sc194="" class="grid"><div _ngcontent-sc194="" class="grid__row grid__row--flush"><div _ngcontent-sc194="" class="grid__row__item grid__row__item--span6@md grid__row__item--span12@sm"><div _ngcontent-sc194="" class="double-feature__item double-feature__item__left theme--blue"><div _ngcontent-sc227="" left=""><app-feature-cta _ngcontent-sc227="" _nghost-sc151=""><div _ngcontent-sc151="" class="feature-cta"><div _ngcontent-sc151="" class=""><div _ngcontent-sc151="" class=""><h3 _ngcontent-sc227="" heading="">What is Google Summer of Code?</h3></div><div _ngcontent-sc151="" class="vr"></div><div _ngcontent-sc151="" class=""><p _ngcontent-sc227="" body=""> Google Summer of Code is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. </p></div><div _ngcontent-sc151="" class="vr vr--3x"></div><a _ngcontent-sc227="" action="" mat-stroked-button="" color="primary" app-route="PUBLIC_HOW_IT_WORKS" class="mat-focus-indicator gsoc-dark-theme mat-stroked-button mat-button-base mat-primary _mat-animation-noopable" tabindex="0" href="/how-it-works"><span class="mat-button-wrapper"> Learn more </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a></div><div _ngcontent-sc151="" class="feature-cta__image"></div></div></app-feature-cta></div></div></div><div _ngcontent-sc194="" class="grid__row__item grid__row__item--span6@md grid__row__item--span12@sm"><div _ngcontent-sc194="" class="double-feature__item double-feature__item__right theme--dark-gray-alpha"><div _ngcontent-sc227="" right=""><app-metrics _ngcontent-sc227="" _nghost-sc195=""><div _ngcontent-sc195="" class="metrics"><div _ngcontent-sc195="" class="metrics__inner"><div _ngcontent-sc195="" class="metric"><div _ngcontent-sc195="" class="metric__callout"> 18<abbr _ngcontent-sc195="" aria-hidden="true" title="thousand" class="text--abbr">K</abbr><span _ngcontent-sc195="" class="visually-hidden">thousand</span>+ </div><div _ngcontent-sc195="" class="metric__label">Students</div></div><div _ngcontent-sc195="" class="metric"><div _ngcontent-sc195="" class="metric__callout">112</div><div _ngcontent-sc195="" class="metric__label">Countries</div></div><div _ngcontent-sc195="" class="metric"><div _ngcontent-sc195="" class="metric__callout"> 40<abbr _ngcontent-sc195="" aria-hidden="true" title="million" class="text--abbr">M</abbr><span _ngcontent-sc195="" class="visually-hidden">million</span>+ </div><div _ngcontent-sc195="" class="metric__label">Lines of Code</div></div><div _ngcontent-sc195="" class="metric"><div _ngcontent-sc195="" class="metric__callout">746</div><div _ngcontent-sc195="" class="metric__label">Open Source Organizations</div></div><div _ngcontent-sc195="" class="metric"><div _ngcontent-sc195="" class="metric__callout"> 17<abbr _ngcontent-sc195="" aria-hidden="true" title="thousand" class="text--abbr">K</abbr><span _ngcontent-sc195="" class="visually-hidden">thousand</span>+ </div><div _ngcontent-sc195="" class="metric__label">Mentors</div></div><div _ngcontent-sc195="" class="metric"><div _ngcontent-sc195="" class="metric__callout">17</div><div _ngcontent-sc195="" class="metric__label">Years</div></div></div></div></app-metrics></div></div></div></div></div></section></app-double-feature><app-home-feature _ngcontent-sc227="" title="Become a GSoC contributor" _nghost-sc196=""><section _ngcontent-sc196="" class="section"><div _ngcontent-sc196="" class="section__inner"><h2 _ngcontent-sc196="" class="home-feature__hd">Become a GSoC contributor</h2><div _ngcontent-sc196="" class="home-feature__bd home-feature__bd-length--short"><p _ngcontent-sc227="" body=""> Are you new to open source and want to learn more about some interesting projects that you can contribute to? Join GSoC where mentors will help guide you on your journey! </p></div><div _ngcontent-sc196="" class="home-feature__ft"><app-contributor-reg-button _ngcontent-sc227="" action="" buttonstyle="FLAT"><!----><!----><!----><!----><button mat-button="" type="button" disabled="true" class="mat-focus-indicator mat-button mat-button-base _mat-animation-noopable mat-button-disabled mat-flat-button ng-star-inserted"><span class="mat-button-wrapper"> Contributor registration closed </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></button><!----><!----><!----></app-contributor-reg-button></div><div _ngcontent-sc196="" class="home-feature__feature-content"><app-feature-cards _ngcontent-sc227="" feature-content="" _nghost-sc200=""><ul _ngcontent-sc200="" class="feature-cards"><li _ngcontent-sc200="" class="feature-cards__item"><app-feature-cta _ngcontent-sc227="" card1="" _nghost-sc151=""><div _ngcontent-sc151="" class="feature-cta"><div _ngcontent-sc151="" class=""><div _ngcontent-sc227="" image="" class="vr vr--4x"><mat-icon _ngcontent-sc227="" role="img" class="mat-icon notranslate theme--alt-blue google-material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font"> play_circle_outline </mat-icon></div><div _ngcontent-sc151="" class=""></div><div _ngcontent-sc151="" class="vr"></div><div _ngcontent-sc151="" class=""><p _ngcontent-sc227="" body="" class="text--weight-medium"> Learn why you should apply to be a GSoC contributor </p></div><div _ngcontent-sc151="" class="vr vr--3x"></div><a _ngcontent-sc227="" action="" href="https://youtu.be/S6IP_6HG2QE" target="_blank" title="Opens in a new window" class="link text--weight-medium"> Watch video </a></div><div _ngcontent-sc151="" class="feature-cta__image"></div></div></app-feature-cta></li><li _ngcontent-sc200="" class="feature-cards__item"><app-feature-cta _ngcontent-sc227="" card2="" _nghost-sc151=""><div _ngcontent-sc151="" class="feature-cta"><div _ngcontent-sc151="" class=""><div _ngcontent-sc227="" image="" class="vr vr--4x"><mat-icon _ngcontent-sc227="" role="img" class="mat-icon notranslate theme--green google-material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font"> people_alt </mat-icon></div><div _ngcontent-sc151="" class=""></div><div _ngcontent-sc151="" class="vr"></div><div _ngcontent-sc151="" class=""><p _ngcontent-sc227="" body="" class="text--weight-medium"> Open source organizations are ready to welcome new, excited contributors into their communities </p></div><div _ngcontent-sc151="" class="vr vr--3x"></div></div><div _ngcontent-sc151="" class="feature-cta__image"></div></div></app-feature-cta></li><li _ngcontent-sc200="" class="feature-cards__item"><app-feature-cta _ngcontent-sc227="" card3="" _nghost-sc151=""><div _ngcontent-sc151="" class="feature-cta"><div _ngcontent-sc151="" class=""><div _ngcontent-sc227="" image="" class="vr vr--4x"><mat-icon _ngcontent-sc227="" role="img" class="mat-icon notranslate theme--orange google-material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font"> lightbulb </mat-icon></div><div _ngcontent-sc151="" class=""></div><div _ngcontent-sc151="" class="vr"></div><div _ngcontent-sc151="" class=""><p _ngcontent-sc227="" body="" class="text--weight-medium"> Learn how to apply to be a GSoC contributor </p></div><div _ngcontent-sc151="" class="vr vr--3x"></div><a _ngcontent-sc227="" action="" href="https://youtu.be/YN7uGCg5vLg" target="_blank" title="Opens in a new window" class="link text--weight-medium"> Watch video </a></div><div _ngcontent-sc151="" class="feature-cta__image"></div></div></app-feature-cta></li></ul></app-feature-cards></div></div></section></app-home-feature><hr _ngcontent-sc227="" class="hr"><app-home-feature _ngcontent-sc227="" title="Open source organizations" _nghost-sc196=""><section _ngcontent-sc196="" class="section"><div _ngcontent-sc196="" class="section__inner"><h2 _ngcontent-sc196="" class="home-feature__hd">Open source organizations</h2><div _ngcontent-sc196="" class="home-feature__bd home-feature__bd-length--long"><div _ngcontent-sc227="" body=""><p _ngcontent-sc227=""> 746 open source organizations have mentored 18,000+ new GSoC contributors since 2005. Our mentoring organizations are eager to teach newcomers to open source about their communities and the thrill of open source development. </p><div _ngcontent-sc227="" class="vr vr--8x"></div><div _ngcontent-sc227="" class="grid"><div _ngcontent-sc227="" class="grid__row"><div _ngcontent-sc227="" class="grid__row__item grid__row__item--span5@md grid__row__item--span12@sm"><h5 _ngcontent-sc227="" body="" class="home-feature__section--heading"> Learn why your organization should participate in GSoC </h5><div _ngcontent-sc227="" class="vr vr--2x"></div><ul _ngcontent-sc227="" class="v-list"><li _ngcontent-sc227="" class="v-list__item"><a _ngcontent-sc227="" href="https://youtu.be/L4JNz6zWzLs" target="_blank" title="Opens in a new window" class="link text--medium"><mat-icon _ngcontent-sc227="" role="img" inline="" class="mat-icon notranslate v-list__icon google-material-icons mat-icon-inline mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">play_circle</mat-icon> Watch video </a></li></ul><div _ngcontent-sc227="" class="vr vr--5x"></div></div><div _ngcontent-sc227="" class="grid__row__item grid__row__item--span2@md grid__row__item--span12@sm"></div><div _ngcontent-sc227="" class="grid__row__item grid__row__item--span5@md grid__row__item--span12@sm"><h5 _ngcontent-sc227="" class="home-feature__section--heading"> Interested in being a GSoC Mentor? </h5><div _ngcontent-sc227="" class="vr vr--2x"></div><ul _ngcontent-sc227="" class="v-list"><li _ngcontent-sc227="" class="v-list__item"><a _ngcontent-sc227="" href="https://www.youtube.com/watch?v=3J_eBuYxcyg" target="_blank" title="Opens in a new window" class="link text--medium"><mat-icon _ngcontent-sc227="" role="img" inline="" class="mat-icon notranslate v-list__icon google-material-icons mat-icon-inline mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">play_circle</mat-icon> Watch video </a></li><li _ngcontent-sc227="" class="v-list__item"><a _ngcontent-sc227="" href="https://google.github.io/gsocguides/mentor/" target="_blank" title="Opens in a new window" class="link text--medium"><mat-icon _ngcontent-sc227="" role="img" inline="" class="mat-icon notranslate v-list__icon google-material-icons mat-icon-inline mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">text_snippet</mat-icon> Read mentor guide </a></li></ul><div _ngcontent-sc227="" class="vr vr--8x"></div></div></div></div><app-org-reg-button _ngcontent-sc227="" buttonstyle="FLAT"><!----><!----><!----><!----><button mat-button="" type="button" disabled="true" class="mat-focus-indicator gsoc-dark-theme mat-button mat-button-base _mat-animation-noopable mat-button-disabled mat-flat-button ng-star-inserted"><span class="mat-button-wrapper"> Organization registration closed </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></button><!----><!----><!----></app-org-reg-button></div></div><div _ngcontent-sc196="" class="home-feature__ft"></div><div _ngcontent-sc196="" class="home-feature__feature-content"></div></div></section></app-home-feature></div><div _ngcontent-sc227="" class="home__news"><div _ngcontent-sc227="" class="home__news__bg theme--blue"></div><div _ngcontent-sc227="" class="home__news__dots"></div><app-latest-news _ngcontent-sc227="" _nghost-sc226=""><section _ngcontent-sc226="" class="section"><div _ngcontent-sc226="" class="section__inner"><div _ngcontent-sc226="" class="grid"><div _ngcontent-sc226="" class="grid__row"><div _ngcontent-sc226="" class="grid__row__item"><h2 _ngcontent-sc226="" class="text--hdg-2">Latest News</h2><div _ngcontent-sc226="" class="vr vr--6x"></div><app-latest-news-scroller _ngcontent-sc226="" _nghost-sc225=""><div _ngcontent-sc225="" class="no-results ng-star-inserted">Google Open Source Blog</div><!----><!----><!----><!----><!----></app-latest-news-scroller><div _ngcontent-sc226="" class="vr vr--5x"></div><a _ngcontent-sc226="" mat-stroked-button="" color="primary" href="https://opensource.googleblog.com/search/label/gsoc" target="_blank" title="Opens in a new window" class="mat-focus-indicator gsoc-dark-theme mat-stroked-button mat-button-base mat-primary _mat-animation-noopable" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"> View all news </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a></div></div></div></div></section></app-latest-news></div></ng-component><!----><!----></main></div></div><!----><!----><!----><app-footer _ngcontent-sc147="" _nghost-sc144=""><footer _ngcontent-sc144="" class="footer theme--white"><div _ngcontent-sc144="" class="footer__content"><div _ngcontent-sc144="" class="grid"><div _ngcontent-sc144="" class="grid__row"><div _ngcontent-sc144="" class="grid__row__item grid__row__item--span7@md grid__row__item--span12@sm"><div _ngcontent-sc144="" class="footer-logo"><a _ngcontent-sc144="" app-route="HOME" href="/" class="active"><img _ngcontent-sc144="" src="assets/media/logo.svg" alt="Google Summer of Code logo"><span _ngcontent-sc144="" class="visually-hidden"> Google Summer of Code Home </span></a><div _ngcontent-sc144="" class="vr vr--2x"></div><p _ngcontent-sc144=""> Introducing developers to open source software development </p></div></div><div _ngcontent-sc144="" class="grid__row__item grid__row__item--span5@md grid__row__item--span12@sm"><div _ngcontent-sc144="" class="right-nav-wrapper"><ul _ngcontent-sc144=""><li _ngcontent-sc144=""><a _ngcontent-sc144="" app-route="PUBLIC_ABOUT" href="/about" class="">About</a></li><li _ngcontent-sc144=""><a _ngcontent-sc144="" app-route="PUBLIC_GET_STARTED" href="/get-started" class=""> Get started </a></li><li _ngcontent-sc144=""><a _ngcontent-sc144="" app-route="PUBLIC_HOW_IT_WORKS" href="/how-it-works" class=""> How it works </a></li><li _ngcontent-sc144=""><a _ngcontent-sc144="" app-route="ARCHIVED_PROGRAMS" href="/archive" class=""> Past programs </a></li><li _ngcontent-sc144=""><a _ngcontent-sc144="" href="https://developers.google.com/open-source/gsoc/timeline" target="_blank" title="Opens in a new window"> 2022 program timeline </a></li></ul><ul _ngcontent-sc144=""><!----><li _ngcontent-sc144=""><a _ngcontent-sc144="" href="https://opensource.googleblog.com/search/label/gsoc" target="_blank" title="Opens in a new window"> News </a></li><li _ngcontent-sc144=""><a _ngcontent-sc144="" app-route="PUBLIC_HELP" href="/help" class="">Help</a></li><li _ngcontent-sc144=""><a _ngcontent-sc144="" href="https://developers.google.com/open-source/gsoc/contact" target="_blank" title="Opens in a new window"> Contact </a></li></ul></div></div></div><div _ngcontent-sc144="" class="grid__row"><div _ngcontent-sc144="" class="grid__row__item"><hr _ngcontent-sc144=""></div></div><div _ngcontent-sc144="" class="grid__row"><div _ngcontent-sc144="" class="grid__row__item"><div _ngcontent-sc144="" class="bottom-nav-wrapper"><div _ngcontent-sc144="" class="vr vr--3x"></div><ul _ngcontent-sc144=""><li _ngcontent-sc144=""><a _ngcontent-sc144="" href="https://www.google.com" target="_blank" title="Opens in a new window" aria-label="Google" class="google-word"></a></li><li _ngcontent-sc144=""><a _ngcontent-sc144="" href="https://policies.google.com/privacy?hl=en" target="_blank" title="Opens in a new window"> Privacy </a></li><li _ngcontent-sc144=""><a _ngcontent-sc144="" app-route="PUBLIC_RULES" href="/rules" class="">Rules</a></li><li _ngcontent-sc144=""><a _ngcontent-sc144="" app-route="PUBLIC_TERMS" href="/terms" class="">Terms</a></li><!----></ul></div></div></div></div></div></footer></app-footer></mat-sidenav-content><!----><mat-sidenav-content cdkscrollable="" class="mat-drawer-content mat-sidenav-content ng-star-inserted" style="margin-left:;margin-right:;"></mat-sidenav-content><!----></mat-sidenav-container></app-layout></app-root>
+        <script data-autoload-cookie-consent-bar="true" data-autoload-cookie-consent-bar-intl-code="" src="https://www.gstatic.com/brandstudio/kato/cookie_choice_component/cookie_consent_bar.v3.js"></script>
+    <script src="runtime.5cf11a0c3090de9b09e5.js" defer=""></script><script src="polyfills.ab6352d29dd9c41a2721.js" defer=""></script><script src="main.c81a441f060a08ba92f4.js" defer=""></script>
+
+
+<div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div></body><!-- This page was prerendered with Angular Universal --></html>
