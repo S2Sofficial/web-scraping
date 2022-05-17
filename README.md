@@ -11,3 +11,5 @@ I'll be doing web scraping but don't worry, it's just for educational purposes o
 
 ## <a href="https://s2sofficial.github.io/web-scraping/gitexplorer/" target="_blank">🧑‍🏫 Gitexplorer </a>
 
+## <a href="https://s2sofficial.github.io/web-scraping/gsoc/" target="_blank">🧑‍💻 Google Summer of Code</a>
+
